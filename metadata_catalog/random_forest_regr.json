@@ -1,0 +1,153 @@
+{
+	"stac_version": "1.0.0",
+	"stac_extensions": [
+	  "https://stac-extensions.github.io/ml-model/v1.0.0/schema.json"
+	],
+	"type": "Feature",
+	"id": "random_forest_regression",
+	"collection": "ml-models-first",
+	"bbox": [
+	  -179.999,
+	  -89.999,
+	  179.999,
+	  89.999
+	],
+	"geometry": {
+	  "type": "Polygon",
+	  "coordinates": [
+		[
+		  [
+			-179.999,
+			-89.999
+		  ],
+		  [
+			179.999,
+			-89.999
+		  ],
+		  [
+			179.999,
+			89.999
+		  ],
+		  [
+			-179.999,
+			89.999
+		  ],
+		  [
+			-179.999,
+			-89.999
+		  ]
+		]
+	  ]
+	},
+	"properties": {
+	  "datetime": null,
+	  "start_datetime": "XXXX-XX-XXXXX:XX:XXX",
+	  "end_datetime": "YYYY-YY-YYYYY:YY:YYY",
+	  "license": "---",
+	  "providers": [
+		{
+		  "name": "EPS-IT",
+		  "roles": [
+			"producer"
+		  ],
+		  "email": "xyz@epsilon-italia.it",
+		  "url": "---url---"
+		}
+	  	],
+		"ml-model:type": "ml-model",
+		"ml-model:learning_approach": "supervised",
+		"ml-model:prediction_type": "regression",
+		"ml-model:architecture": "random_forest",
+		"ml-model:training-processor-type": "cpu",
+		"ml-model:training-os": "linux"
+	},
+
+	"links": 
+	[
+		{
+			"rel": "root",
+			"href": "./collection.json",
+			"type": "application/json",
+			"title": "Root Catalog"
+		},
+
+		{
+			"rel": "parent",
+			"href": "./collection.json",
+			"type": "application/json",
+			"title": "Root Catalog"
+		},
+		
+		{
+			"rel": "collection",
+			"href": "./collection.json",
+			"type": "application/json"
+		},
+		
+		{
+			"rel": "ml-model:inferencing-image",
+			"href": "--docker_link--",
+			"type": "docker-image",
+			"title": "model"
+		},
+
+		{
+			"rel": "ml-model:training-image",
+			"href": "--docker_link--",
+			"type": "docker-image",
+			"title": "image_for_training_model"
+		},
+
+		{
+			"rel": "ml-model:train-data",
+			"href": "data_json_link",
+			"type": "application/json",
+			"title": "training_data"
+		},
+
+		{
+			"rel": "ml-model:test-data",
+			"href": "data_json_link",
+			"type": "application/json",
+			"title": "test_data"		
+		}
+	],
+	"assets":
+	[
+		{
+			"model-inference": 
+			{
+      			"href": "./inferencing.yml",
+      			"type": "text/x-yaml; application=compose",
+      			"title": "Model inferencing runtime",
+      			"roles": [
+        			"ml-model:inference-runtime"
+      			]
+			}
+		},
+
+		{
+			"model-training":
+			{
+				"href": "./training.yml",
+				"type": "text/x-yaml; application=compose",
+				"title": "Model training runtime",
+				"roles": [
+        			"ml-model:training-runtime"
+      			]
+			}
+		},
+
+		{
+			"model-checkpoint":
+			{
+				"href": "model_link",
+				"type": "text/x-yaml; application=compose",
+				"title": "Model checkpoint",
+				"roles": [
+        			"ml-model:checkpoint"
+      			]
+			}	
+		}
+	]
+}
