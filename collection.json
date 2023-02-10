@@ -1,0 +1,49 @@
+{
+	"stac_version": "1.0.0",
+	"stac_extensions": [
+	  "https://stac-extensions.github.io/ml-model/v1.0.0/schema.json"
+	],
+	"type": "Collection",
+	"id": "ml-models-first",
+	"title": "Models",
+	"description": "description",
+	"license": "---",
+	"extent": {
+	  "spatial": {
+		"bbox": [
+		  [
+			-179.999,
+			-89.999,
+			179.999,
+			89.999
+		  ]
+		]
+	  },
+	  "temporal": {
+		"interval": [
+		  [
+			"XXXX-XX-XXXXX:XX:XXX",
+			"YYYY-YY-YYYYY:YY:YYY"
+		  ]
+		]
+	  }
+	},
+	"links": [
+	  {
+		"href": "./collection.json",
+		"rel": "self"
+	  },
+	  {
+		"href": "./cnn.json",
+		"rel": "cnn"
+	  },
+	  {
+		"href": "./decision_tree_clf.json",
+		"rel": "decision_tree_clf"
+	  },
+	  {
+		"href": "./random_forest_regr.json",
+		"rel": "random_forest_regr"
+	  }
+	]
+  }
