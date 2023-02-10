@@ -34,16 +34,19 @@
 		"rel": "self"
 	  },
 	  {
+		"rel": "item",
 		"href": "./cnn.json",
-		"rel": "cnn"
+		"type": "application/json"
 	  },
 	  {
+		"rel": "item",
 		"href": "./decision_tree_clf.json",
-		"rel": "decision_tree_clf"
+		"type": "application/json"
 	  },
 	  {
+		"rel": "item",
 		"href": "./random_forest_regr.json",
-		"rel": "random_forest_regr"
+		"type": "application/json"
 	  }
 	]
   }
