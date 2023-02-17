@@ -56,8 +56,8 @@ body:
       description: This element should be used to categorise the resource according to possible vocabularie
       multiple: true
       options:
-        -  
-        -  
+        - A
+        - B
   # pubblication date 
   - type: textarea
     id: pubblication-date
