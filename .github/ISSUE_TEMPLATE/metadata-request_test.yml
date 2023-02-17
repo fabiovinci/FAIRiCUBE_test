@@ -1,9 +1,5 @@
-name: Metadata Request
-description: Request a metadata to be made available to FAIRiCUBE use cases. This includes requests to ingest new metadata.
-title: "[Metadata Request]: "
-labels: ["metadata-request"]
-assignees:
-  - Mohinem
+name: Algorithms Data Request
+description: Algorithms metadata schema
 body:
   - type: markdown
     attributes:
@@ -12,198 +8,299 @@ body:
   - type: markdown
     attributes:
       value: |-
-        # General
+        # Data Request
+  # inizio - name
+  - type: textarea
+    id: Name_of_resource
+    attributes:
+      label: Name of resource
+      description: Textual name identifying the resource. Resource can be the algorithm, the model, or the pre-processing pipeline.
+    validations:
+      required: true
+  # id
   - type: input
     id: id
     attributes:
       label: ID
-      description: Datacube or collection identifier 
-      placeholder: |-
-        Example: Windspeed
+      description: Globally unique and persistent identifier of the resource.
     validations:
-      required: true
+      required: true  
+  # description  
   - type: textarea
     id: description
     attributes:
       label: Description
-      description: Brief, nontechnical explanation of the datacube
-      placeholder: A timeseries of atmospheric wind speed over Europe
+      description: Description of the resource.
     validations:
       required: true
-  - type: textarea
-    id: project-purpose
-    attributes:
-      label: Project purpose 
-      description: Description of the reason for collection/generation in relation to the project/WP/Task objectives. Why and how is this data collection useful? For what use case was the data resource created?
-      placeholder: TBD
-    validations:
-      required: false
+  # main category
   - type: dropdown
-    id: preferred-platform
+    id: main-category
     attributes:
-      label: Preferred Platform
-      multiple: true
-      options:
-        - EOxHub
-        - Rasdaman
-        - Other
-  - type: dropdown
-    id: preferred-method
-    attributes:
-      label: Preferred Method
-      multiple: true
-      options:
-        - Assisted by the platform provider
-        - Manual by the data requester themselves
-  - type: markdown
-    attributes:
-      value: |-
-        # Datacube structure
-  - type: textarea
-    id: axes
-    attributes:
-      label: Axes
-      description: Enumerate all axes of the datacube and their description 
-      placeholder: |-
-        Lat, Long: horizontal extent in WGS84; regular, resolution: XXX, uom: degree 
-        t: time in days; regular, resolution: 1 day, uom: day 
-        plev: pressure level, such as “FL100” expressed as 10000; irregular, uom: FL 
-    validations:
-      required: false
-  - type: textarea
-    id: cell-type
-    attributes:
-      label: Cell type
-      description: What does each pixel/voxel represent? Indicate meaning, data type, and unit of measure
-      placeholder: |-
-        wind_u: East/West wind component, data type: uint16, uom: W/m^2 
-        wind_v: North/South wind component, data type: uint16, uom: W/m^2 
-    validations:
-      required: false
-  - type: input
-    id: null-values
-    attributes:
-      label: Null values
-      description: Set of values which express "data unavailable", "data unknown", etc.
-      placeholder: 9999, NaN
-    validations:
-      required: false
-  - type: input
-    id: standards
-    attributes:
-      label: (Meta) data Standards
-      description: Standards data complies with
-      placeholder: OGC CIS
-    validations:
-      required: false
-  - type: markdown
-    attributes:
-      value: |-
-        # Datacube access
-  - type: input
-    id: apis
-    attributes:
-      label: APIs
-      description: Access interfaces through which datacube can be accessed
-      placeholder: OGC WMS, WMTS, WCS, WCPS, API Coverages, API Processes, etc.
-    validations:
-      required: false
-  - type: input
-    id: access-control
-    attributes:
-      label: Access control
-      description: Security measures and policies applied
-      placeholder: Login-protected, access only for FAIRiCUBE beneficiaries
-    validations:
-      required: false
-  - type: markdown
-    attributes:
-      value: |-
-        # Curator
-  - type: input
-    id: responsible
-    attributes:
-      label: Responsible
-      description: Beneficiary name, contact(s)
-      placeholder: <organisation>, <name>, <email>, ORCID <id>
-    validations:
-      required: false
-  - type: markdown
-    attributes:
-      value: |-
-        # Data origin
-  - type: input
-    id: data-source
-    attributes:
-      label: Data Source
-      description: Origin of the data (institution, etc.) including download URL / email as appropriate where the data can be found
-      placeholder: DWD
-    validations:
-      required: false
-  - type: input
-    id: data-preprocessing
-    attributes:
-      label: Data Preprocessing
-      description: Brief description of what processing data have undergone to get into the datacube
-      placeholder: Extracted from DWD-provided zip-compressed GRIB2
-    validations:
-      required: false
-  - type: input
-    id: quality-control
-    attributes:
-      label: Quality Control
-      description: Describe any quality measures (standardised calibration, repeated samples or measurements, data capture, data entry validation, peer review of data, or representation with controlled vocabularies)
-      placeholder: None in particular, DWD data are used as is
-    validations:
-      required: false
-  - type: input
-    id: documents-publications 
-    attributes:
-      label: Documents & publications 
-      description: List related publications / public deliverables, state DOI and/or permanent location
-      placeholder: TBD
-    validations:
-      required: false
-  - type: markdown
-    attributes:
-      value: |-
-        # Legal
-  - type: input
-    id: license
-    attributes:
-      label: License
-      description: Such as Creative Commons CC BY 4.0 / Open Data Commons ODC-BY20 / Creative Commons BY NC 4.021
-      placeholder: CC-BY-NC on RAS side, but constrained by DWD
-    validations:
-      required: false
-  - type: input
-    id: ownership
-    attributes:
-      label: Ownership
-      description: IPR, Ownership (including 3rd party, citizen participation)
-      placeholder: RAS/DWD
-    validations:
-      required: false
-  - type: input
-    id: personal-data 
-    attributes:
-      label: Personal Data 
+      label: Main category
       description: |-
-        Confirm either:  
-        No personal data is present in the dataset 
-        Personal data is present, managed in compliance with GDPR 
-        If (b), describe measures taken to secure, protect and/or pseudoanonymise / anonymise data. Notify the Project DPO if an issue arises. 
-      placeholder: No personal data are captured in this datacube 
+        Main category of the resource, e.g. ML, ingestion, pre-processing. 
+        Notice that the codelist contains also some specific elements to further specify the resource (e.g., "DL" as a special case of "ML"). 
+      multiple: false
+      options:
+        - ML
+        - DL
+        - Preprocessing
+    validations:
+      required: true
+  # other category
+  - type: dropdown
+    id: other-category
+    attributes:
+      label: Other category
+      description: This element should be used to categorise the resource according to possible vocabularie
+      multiple: true
+      options:
+        -  
+        -  
+  # pubblication date 
+  - type: textarea
+    id: pubblication-date
+    attributes:
+      label: Pubblication date 
+      description: Date of publication - i.e., first sharing with the scientific community - of the resource.
+    validations:
+      required: true
+  # objective
+  - type: dropdown
+    id: objective
+    attributes:
+      label: Objective
+      description: This element should be used to provide info about “What does the resource perform”, i.e., the purpose of the resource.
+      multiple: true
+      options:
+        - object-detection
+        - classification
+        - segmentation
+        - regression
+        - outliers-removing
+        - gap-filling
+    validations:
+      required: true
+  # platform
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Platform hosting the resource
+      multiple: true
+      options:
+        - EOX
+        - Rasdaman
+        - Google Colab
+        - Kaggle
+        - Microsoft Azure
+        - Amazon AWS
+        - Local Jupyter Notebook
+    validations:
+      required: true
+  # framework
+  - type: dropdown
+    id: framework
+    attributes:
+      label: Framework
+      description: |-
+        This field is generally intended as collection of reusable code written by others.
+        In this respect, it includes both frameworks, intended as program scaffolds that supply the blueprint of a product, and libraries, intended as collections of pre-defined methods and classes.
+      multiple: false
+      options:
+        - PyTorch
+        - Tensorflow
+        - Scikit-learn
+        - Keras
+        - Pandas
+        - Numpy
+        - OpenCV
+        - XGBoost
+        - Theano
+    validations:
+      required: true
+  # architecture
+  - type: dropdown
+    id: architecture
+    attributes:
+      label: Architecture
+      description: |-
+        This is a conditional element, applied only to ML algorithms.
+        This field has a different meaning than "algorithm" because there are often multiple "implementations" of an architecture.
+      multiple: false
+      options:
+        - random-forest
+        - cnn
+        - k-means
+        - DBSCAN
+        - decision-tree
+        - ensemble
+        - gradient
     validations:
       required: false
-  - type: markdown
+  # approach
+  - type: dropdown
+    id: approach
     attributes:
-      value: |-
-        # Other
+      label: Approach
+      description: This is a conditional element, applied only to ML algorithms, identifying the learning modality.
+      multiple: false
+      options:
+        - supervised
+        - unsupervised
+        - semi-supervised
+        - reinforcement-learning
+    validations:
+      required: false
+  # algorithm
+  - type: dropdown
+    id: algorithm
+    attributes:
+      label: Algorithm
+      description: |-
+        This field contains the name of the algorithm, i.e., an implementation of an architecture.
+        This field has a different meaning than ‘architecture’ because there are often multiple "implementations" of an architecture.
+      multiple: false
+      options:
+        - Random-Forest-Classifier
+        - Convolutional-Neural-Network
+        - k-means
+        - Min-max-normalization
+        - DBSCAN
+        - Decision-Tree-Classifier
+        - Random-Forest-Regression
+        - SGD
+        - KNN
+        - SegNet
+        - LeNet
+        - Decision-Tree-Regression
+        - Voting-Classifier
+        - AdaBoost-Classifier
+        - AdaBoost-Regression
+    validations:
+      required: true
+  # processor
+  - type: dropdown
+    id: processor
+    attributes:
+      label: Processor
+      description: Type of processor used.
+      multiple: false
+      options:
+        - cpu
+        - gpu
+        - tpu
+    validations:
+      required: true
+  # OS
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS
+      description: OS System used.
+      multiple: false
+      options:
+        - aix
+        - linux
+        - win32
+        - cygwin
+        - darwin
+    validations:
+      required: true
+  # keyword
   - type: textarea
-    id: additional-information
+    id: keyword
     attributes:
-      label: Additional Information
-      description: Any additional information that might be relevant
+      label: Keyword
+      description: A series of keywords which can facilitate the resource discoverability.
+    validations:
+      required: true
+  # reference-link
+  - type: input
+    id: reference-link
+    attributes:
+      label: Reference link
+      description: Link(s) to resource home page and/or download page
+    validations:
+      required: false
+  # example
+  - type: input
+    id: example
+    attributes:
+      label: Example
+      description: Link(s) to websites (also publications) providing examples of how the resource has been used.
+    validations:
+      required: false
+  # input-data
+  - type: input
+    id: input-data
+    attributes:
+      label: Input data
+      description: Link to input data/metadata, helpful for a better understanding of context and domain.
+    validations:
+      required: true
+  # Characteristics of input data
+  - type: textarea
+    id: characteristics-of-input-data
+    attributes:
+      label: Characteristics of input data
+      description: |-
+        Textual description of the input data to the resource, essential to understand the context, the domain and the characteristics of data used by the resource. 
+        This field includes any sampling techniques, which version of the data if multiple versions are available, and in the case of ML resources also the percentages of training, validation and testing sets.
+    validations:
+      required: true
+  # Biases and ethical aspects
+  - type: textarea
+    id: biases-and-ethical-aspects
+    attributes:
+      label: Biases and ethical aspects
+      description: |-
+        This field may contain observations on the data and/or any biases found.
+        This field is optional but strongly recommended for pre-processing resources.
+        In the case of ML resources, this field is closely related to the performance field.
+    validations:
+      required: false
+  # output-data
+  - type: input
+    id: output-data
+    attributes:
+      label: Output data
+      description: Link to output data/metadata.
+    validations:
+      required: true
+  # Characteristics of output data
+  - type: textarea
+    id: characteristics-of-output-data
+    attributes:
+      label: Characteristics of output data
+      description: Textual description of the output data from the resource.
+    validations:
+      required: true
+  # performance
+  - type: textarea
+    id: perfmance
+    attributes:
+      label: Performance
+      description: This field contains result description and explanation, including a detailed description of the hyperparameters used, the run times, the metrics used for evaluation, and the respective scores and performance.
+    validations:
+      required: false
+  # Conditions for access and use
+  - type: dropdown
+    id: conditions-for-access-and-use
+    attributes:
+      label: Conditions for access and use
+      description: Type of distribution license for the resource.
+      multiple: false
+      options:
+        - MIT
+    validations:
+      required: true
+  # Constraints
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: This element can be used to provide information about possible constraints related to the use of the resource.
     validations:
       required: false
