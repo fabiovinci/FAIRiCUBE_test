@@ -3,7 +3,7 @@ description: Algorithms metadata schema
 body:
   - type: markdown
     attributes:
-      value: |
+      value: |-
         Please provide the information requested below. Mandatory elements are marked with `*`.
   - type: markdown
     attributes:
