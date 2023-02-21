@@ -1,4 +1,4 @@
-name: Algorithms Data Request
+name: Algorithms Data Request TEST
 description: Algorithms metadata schema
 body:
   - type: markdown
