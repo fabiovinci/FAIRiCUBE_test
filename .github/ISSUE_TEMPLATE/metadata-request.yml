@@ -1,0 +1,306 @@
+name: Algorithms Data Request
+description: Algorithms metadata schema
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide the information requested below. Mandatory elements are marked with `*`.
+  - type: markdown
+    attributes:
+      value: |-
+        # Data Request
+  # inizio - name
+  - type: textarea
+    id: Name_of_resource
+    attributes:
+      label: Name of resource
+      description: Textual name identifying the resource. Resource can be the algorithm, the model, or the pre-processing pipeline.
+    validations:
+      required: true
+  # id
+  - type: input
+    id: id
+    attributes:
+      label: ID
+      description: Globally unique and persistent identifier of the resource.
+    validations:
+      required: true  
+  # description  
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Description of the resource.
+    validations:
+      required: true
+  # main category
+  - type: dropdown
+    id: main-category
+    attributes:
+      label: Main category
+      description: |-
+        Main category of the resource, e.g. ML, ingestion, pre-processing. 
+        Notice that the codelist contains also some specific elements to further specify the resource (e.g., "DL" as a special case of "ML"). 
+      multiple: false
+      options:
+        - ML
+        - DL
+        - Preprocessing
+    validations:
+      required: true
+  # other category
+  - type: dropdown
+    id: other-category
+    attributes:
+      label: Other category
+      description: This element should be used to categorise the resource according to possible vocabularie
+      multiple: true
+      options:
+        - A
+        - B
+  # pubblication date 
+  - type: textarea
+    id: pubblication-date
+    attributes:
+      label: Pubblication date 
+      description: Date of publication - i.e., first sharing with the scientific community - of the resource.
+    validations:
+      required: true
+  # objective
+  - type: dropdown
+    id: objective
+    attributes:
+      label: Objective
+      description: This element should be used to provide info about “What does the resource perform”, i.e., the purpose of the resource.
+      multiple: true
+      options:
+        - object-detection
+        - classification
+        - segmentation
+        - regression
+        - outliers-removing
+        - gap-filling
+    validations:
+      required: true
+  # platform
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Platform hosting the resource
+      multiple: true
+      options:
+        - EOX
+        - Rasdaman
+        - Google Colab
+        - Kaggle
+        - Microsoft Azure
+        - Amazon AWS
+        - Local Jupyter Notebook
+    validations:
+      required: true
+  # framework
+  - type: dropdown
+    id: framework
+    attributes:
+      label: Framework
+      description: |-
+        This field is generally intended as collection of reusable code written by others.
+        In this respect, it includes both frameworks, intended as program scaffolds that supply the blueprint of a product, and libraries, intended as collections of pre-defined methods and classes.
+      multiple: false
+      options:
+        - PyTorch
+        - Tensorflow
+        - Scikit-learn
+        - Keras
+        - Pandas
+        - Numpy
+        - OpenCV
+        - XGBoost
+        - Theano
+    validations:
+      required: true
+  # architecture
+  - type: dropdown
+    id: architecture
+    attributes:
+      label: Architecture
+      description: |-
+        This is a conditional element, applied only to ML algorithms.
+        This field has a different meaning than "algorithm" because there are often multiple "implementations" of an architecture.
+      multiple: false
+      options:
+        - random-forest
+        - cnn
+        - k-means
+        - DBSCAN
+        - decision-tree
+        - ensemble
+        - gradient
+    validations:
+      required: false
+  # approach
+  - type: dropdown
+    id: approach
+    attributes:
+      label: Approach
+      description: This is a conditional element, applied only to ML algorithms, identifying the learning modality.
+      multiple: false
+      options:
+        - supervised
+        - unsupervised
+        - semi-supervised
+        - reinforcement-learning
+    validations:
+      required: false
+  # algorithm
+  - type: dropdown
+    id: algorithm
+    attributes:
+      label: Algorithm
+      description: |-
+        This field contains the name of the algorithm, i.e., an implementation of an architecture.
+        This field has a different meaning than ‘architecture’ because there are often multiple "implementations" of an architecture.
+      multiple: false
+      options:
+        - Random-Forest-Classifier
+        - Convolutional-Neural-Network
+        - k-means
+        - Min-max-normalization
+        - DBSCAN
+        - Decision-Tree-Classifier
+        - Random-Forest-Regression
+        - SGD
+        - KNN
+        - SegNet
+        - LeNet
+        - Decision-Tree-Regression
+        - Voting-Classifier
+        - AdaBoost-Classifier
+        - AdaBoost-Regression
+    validations:
+      required: true
+  # processor
+  - type: dropdown
+    id: processor
+    attributes:
+      label: Processor
+      description: Type of processor used.
+      multiple: false
+      options:
+        - cpu
+        - gpu
+        - tpu
+    validations:
+      required: true
+  # OS
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS
+      description: OS System used.
+      multiple: false
+      options:
+        - aix
+        - linux
+        - win32
+        - cygwin
+        - darwin
+    validations:
+      required: true
+  # keyword
+  - type: textarea
+    id: keyword
+    attributes:
+      label: Keyword
+      description: A series of keywords which can facilitate the resource discoverability.
+    validations:
+      required: true
+  # reference-link
+  - type: input
+    id: reference-link
+    attributes:
+      label: Reference link
+      description: Link(s) to resource home page and/or download page
+    validations:
+      required: false
+  # example
+  - type: input
+    id: example
+    attributes:
+      label: Example
+      description: Link(s) to websites (also publications) providing examples of how the resource has been used.
+    validations:
+      required: false
+  # input-data
+  - type: input
+    id: input-data
+    attributes:
+      label: Input data
+      description: Link to input data/metadata, helpful for a better understanding of context and domain.
+    validations:
+      required: true
+  # Characteristics of input data
+  - type: textarea
+    id: characteristics-of-input-data
+    attributes:
+      label: Characteristics of input data
+      description: |-
+        Textual description of the input data to the resource, essential to understand the context, the domain and the characteristics of data used by the resource. 
+        This field includes any sampling techniques, which version of the data if multiple versions are available, and in the case of ML resources also the percentages of training, validation and testing sets.
+    validations:
+      required: true
+  # Biases and ethical aspects
+  - type: textarea
+    id: biases-and-ethical-aspects
+    attributes:
+      label: Biases and ethical aspects
+      description: |-
+        This field may contain observations on the data and/or any biases found.
+        This field is optional but strongly recommended for pre-processing resources.
+        In the case of ML resources, this field is closely related to the performance field.
+    validations:
+      required: false
+  # output-data
+  - type: input
+    id: output-data
+    attributes:
+      label: Output data
+      description: Link to output data/metadata.
+    validations:
+      required: true
+  # Characteristics of output data
+  - type: textarea
+    id: characteristics-of-output-data
+    attributes:
+      label: Characteristics of output data
+      description: Textual description of the output data from the resource.
+    validations:
+      required: true
+  # performance
+  - type: textarea
+    id: perfmance
+    attributes:
+      label: Performance
+      description: This field contains result description and explanation, including a detailed description of the hyperparameters used, the run times, the metrics used for evaluation, and the respective scores and performance.
+    validations:
+      required: false
+  # Conditions for access and use
+  - type: dropdown
+    id: conditions-for-access-and-use
+    attributes:
+      label: Conditions for access and use
+      description: Type of distribution license for the resource.
+      multiple: false
+      options:
+        - MIT
+    validations:
+      required: true
+  # Constraints
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: This element can be used to provide information about possible constraints related to the use of the resource.
+    validations:
+      required: false
