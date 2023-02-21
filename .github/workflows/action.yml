@@ -1,19 +1,25 @@
-name: Add To GitHub projects
+name: Create and/or Update edited issues to my project
 
 on:
   issues:
     types:
-      - opened
-      - labeled
-      
+      - edited
+
 jobs:
-  add-to-project:
-    name: Add issue to project
+  create-update-project:
+    name: Create/update project issue
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/add-to-project@v0.4.0
+      - uses: actions/checkout@v3
+      - uses: actions/add-to-project@v0.4.0 # This adds the issue to the project
+        with:
+          project-url: https://github.com/users/titoportas/projects/2
+          github-token: ${{ secrets.GHPROJECT_SECRET }}
+        id: add-project
+      - uses: titoportas/update-project-fields@v0.1.0
         with:
           project-url: https://github.com/users/fabiovinci/projects/6
           github-token: ${{ secrets.PROJECT_AUTOMATION }}
-          labeled: question
-          status: question
+          item-id: ${{ steps.add-project.outputs.itemId }} # Use the item-id output of the previous step
+          field-keys: TextField,NumberField,FinishedAt,Size,IterationField
+          field-values: foo,123,2022-09-01,🐋 X-Large,[1]
