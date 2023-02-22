@@ -1,5 +1,5 @@
-name: Algorithms Data Request
-description: Algorithms metadata schema
+name: Resource Metadata Request
+description: Request a resource metadata to be made available to FAIRiCUBE use cases.
 body:
   - type: markdown
     attributes:
@@ -8,7 +8,7 @@ body:
   - type: markdown
     attributes:
       value: |-
-        # Data Request
+        # Resource Metadata Request
   # inizio - name
   - type: textarea
     id: Name_of_resource
