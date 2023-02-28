@@ -59,7 +59,7 @@ body:
         - A
         - B
   # pubblication date 
-  - type: textarea
+  - type: date
     id: pubblication-date
     attributes:
       label: Pubblication date 
