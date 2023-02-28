@@ -26,9 +26,8 @@ assignees: ''
 
 # Additional information
 
-
 ## Change proposer
 <!-- Specify the submitting person, organisation or group of people/organisations. -->
 
 ## References
-<!-- If relevant, provide links to more detailed documentation / online discussions in publicly available resources (e.g. GitHub repositories, INSPIRE Community Forum discussions ...). -->
+<!-- If relevant, provide links to more detailed documentation / online discussions in publicly available resources (e.g. GitHub repositories, Forum discussions ...). -->
