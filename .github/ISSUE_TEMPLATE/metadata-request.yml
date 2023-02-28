@@ -45,7 +45,8 @@ body:
       options:
         - ML
         - DL
-        - Preprocessing
+        - Pre-processing
+        - Ingestion
     validations:
       required: true
   # other category
@@ -58,6 +59,8 @@ body:
       options:
         - A
         - B
+    validations:
+      required: False
   # pubblication date 
   - type: textarea
     id: pubblication-date
@@ -80,6 +83,11 @@ body:
         - regression
         - outliers-removing
         - gap-filling
+        - feature-selection
+        - dimensionality-reduction
+        - feature-scaling
+        - dataset-balancing
+        - data-transformation
     validations:
       required: true
   # platform
@@ -107,7 +115,7 @@ body:
       description: |-
         This field is generally intended as collection of reusable code written by others.
         In this respect, it includes both frameworks, intended as program scaffolds that supply the blueprint of a product, and libraries, intended as collections of pre-defined methods and classes.
-      multiple: false
+      multiple: true
       options:
         - PyTorch
         - Tensorflow
@@ -118,6 +126,8 @@ body:
         - OpenCV
         - XGBoost
         - Theano
+        - imblearn
+        - pillow
     validations:
       required: true
   # architecture
@@ -132,11 +142,10 @@ body:
       options:
         - random-forest
         - cnn
-        - k-means
-        - DBSCAN
         - decision-tree
         - ensemble
-        - gradient
+        - gradient-based
+        - density-based
     validations:
       required: false
   # approach
@@ -165,7 +174,7 @@ body:
       options:
         - Random-Forest-Classifier
         - Convolutional-Neural-Network
-        - k-means
+        - K-means
         - Min-max-normalization
         - DBSCAN
         - Decision-Tree-Classifier
@@ -178,6 +187,8 @@ body:
         - Voting-Classifier
         - AdaBoost-Classifier
         - AdaBoost-Regression
+        - SMOTE
+        - custom-method
     validations:
       required: true
   # processor
@@ -185,7 +196,9 @@ body:
     id: processor
     attributes:
       label: Processor
-      description: Type of processor used.
+      description: |- 
+        Type of processor used for training or inference in learning tasks, but also for running a pre-processing notebook. 
+        If more than one processor is used to perform the entire task, indicate the one with the highest computing power.
       multiple: false
       options:
         - cpu
@@ -198,7 +211,7 @@ body:
     id: os
     attributes:
       label: OS
-      description: OS System used.
+      description: Operating System System used.
       multiple: false
       options:
         - aix
@@ -206,6 +219,7 @@ body:
         - win32
         - cygwin
         - darwin
+        - macOS
     validations:
       required: true
   # keyword
@@ -213,7 +227,10 @@ body:
     id: keyword
     attributes:
       label: Keyword
-      description: A series of keywords which can facilitate the resource discoverability.
+      description: |-
+        A series of keywords which can facilitate the resource discoverability.
+        These keywords can be used for a quick search of resources and should highlight foremost characteristics of the resource.  
+        For the categorization of the resources via keywords to be effective, we recommend that a maximum of 5 keywords is provided. 
     validations:
       required: true
   # reference-link
@@ -221,7 +238,7 @@ body:
     id: reference-link
     attributes:
       label: Reference link
-      description: Link(s) to resource home page and/or download page
+      description: Link(s) to resource web page and/or download page
     validations:
       required: false
   # example
@@ -229,7 +246,7 @@ body:
     id: example
     attributes:
       label: Example
-      description: Link(s) to websites (also publications) providing examples of how the resource has been used.
+      description: Link(s) to websites (including publications) providing examples of how the resource has been used.
     validations:
       required: false
   # input-data
@@ -246,8 +263,9 @@ body:
     attributes:
       label: Characteristics of input data
       description: |-
-        Textual description of the input data to the resource, essential to understand the context, the domain and the characteristics of data used by the resource. 
-        This field includes any sampling techniques, which version of the data if multiple versions are available, and in the case of ML resources also the percentages of training, validation and testing sets.
+        The field contains a textual description of the main characteristics of each input data to the resource.
+        This field will also include e.g., description of sampling techniques, version of the data (if multiple versions are available), and, in the case of ML resources, also
+        the percentages of training, validation and testing sets. This field may contain details on the suitability of the resource for the chosen geographic area and thematic context.
     validations:
       required: true
   # Biases and ethical aspects
@@ -294,6 +312,60 @@ body:
       multiple: false
       options:
         - MIT
+        - afl-3.0
+        - agpl-3.0
+        - artistic-2.0
+        - bigscience-bloom-rail-1.0
+        - bigscience-openrail-m
+        - bsd
+        - bsd-2-clause
+        - bsd-3-clause
+        - bsd-3-clause-clear
+        - bsl-1.0
+        - cc
+        - cc0-1.0
+        - cc-by-2.0
+        - cc-by-2.5
+        - cc-by-3.0
+        - cc-by-4.0
+        - cc-by-nc-2.0
+        - cc-by-nc-3.0
+        - cc-by-nc-4.0
+        - cc-by-nc-nd-3.0
+        - cc-by-nc-nd-4.0
+        - cc-by-nc-sa-2.0
+        - cc-by-nc-sa-3.0
+        - cc-by-nc-sa-4.0
+        - cc-by-nd-4.0
+        - cc-by-sa-3.0
+        - cc-by-sa-4.0
+        - creativeml-openrail-m
+        - c-uda
+        - ecl-2.0
+        - epl-1.0
+        - epl-2.0
+        - eupl-1.1
+        - gfdl
+        - gpl
+        - gpl-2.0
+        - gpl-3.0
+        - isc
+        - lgpl
+        - lgpl-2.1
+        - lgpl-3.0
+        - lgpl-lr
+        - mpl-2.0
+        - ms-pl
+        - ncsa
+        - odbl
+        - odc-by
+        - ofl-1.1
+        - openrail
+        - openrail++
+        - osl-3.0
+        - pddl
+        - postgresql
+        - wtfpl
     validations:
       required: true
   # Constraints
