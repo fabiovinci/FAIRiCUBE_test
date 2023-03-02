@@ -5,7 +5,7 @@ jobs:
   Move_Labeled_Issue_On_Project_Board:
     runs-on: ubuntu-latest
     steps:
-    - uses: fabiovinci/move-labeled-or-milestoned-issue@v0.1
+    - uses: fabiovinci/move-labeled-or-milestoned-issue@v0.2
       with:
         action-token: "${{ secrets.PROJECT_AUTOMATION }}"
         project-url: "https://github.com/users/fabiovinci/projects/6"
