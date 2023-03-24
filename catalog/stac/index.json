@@ -5,12 +5,12 @@
   "description": "A STAC catalog that contains all collections available on the FAIRiCUBE Hub and within the Sentinel Hub openEO backend.",
   "links": [
     {
-      "href": "https://fairicube.github.io/catalog/stac/index.json",
+      "href": "https://catalog.fairicube.eu/stac/index.json",
       "rel": "self",
       "type": "application/json"
     },
     {
-      "href": "https://fairicube.github.io/catalog/stac/index.json",
+      "href": "https://catalog.fairicube.eu/stac/index.json",
       "rel": "root",
       "type": "application/json"
     },
