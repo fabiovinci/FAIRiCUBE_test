@@ -15,6 +15,6 @@
       "type": "application/json"
     },
       {"id": "SENTINEL2_L2A_MOSAIC_120", "rel": "child", "type": "application/json", "href": "/sentinel-s2-l2a-mosaic-120.json"},
-      {"id": "COPERNICUS_30", "rel": "child", "type": "application/json", "href": "https://catalog.fairicube.eu/stac/copernicus-dem.json"},
+      {"id": "COPERNICUS_30", "rel": "child", "type": "application/json", "href": "https://catalog.fairicube.eu/stac/copernicus-dem.json"}
   ]
 }
