@@ -41,7 +41,7 @@
 	  ]
 	},
 	"properties": {
-	  "datetime": "",
+	  "datetime": "null",
 	  "start_datetime": "2023-02-05 09:15:06",
 	  "end_datetime": "2023-06-05 09:15:06",
 	  "license": "---",
