@@ -41,7 +41,7 @@
 	  ]
 	},
 	"properties": {
-	  "datetime": null,
+	  "datetime": "null",
 	  "start_datetime": "1985-04-12T23:20:50.52Z",
 	  "end_datetime": "1996-12-19T16:39:57-08:00",
 	  "license": "---",
