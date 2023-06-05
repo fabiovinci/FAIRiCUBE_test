@@ -44,7 +44,7 @@
 	  "start_datetime": "XXXX-XX-XXXXX:XX:XXX",
 	  "end_datetime": "YYYY-YY-YYYYY:YY:YYY",
 	  "license": "---",
-	  "performance": "good",	
+	  "performance": "good",
 	  "providers": [
 		{
 		  "name": "EPS-IT",
@@ -60,7 +60,8 @@
 		"ml-model:prediction_type": "classification",
 		"ml-model:architecture": "CNN",
 		"ml-model:training-processor-type": "gpu",
-		"ml-model:training-os": "linux"
+		"ml-model:training-os": "linux",
+		"preprocessing-pipeline:framework": "numpy"
 	},
 
 	"links": 
