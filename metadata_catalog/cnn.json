@@ -61,6 +61,7 @@
 		"ml-model:architecture": "CNN",
 		"ml-model:training-processor-type": "gpu",
 		"ml-model:training-os": "linux",
+		"ml-model:test": "test",
 		"preprocessing-pipeline:framework": "numpy"
 	},
 
