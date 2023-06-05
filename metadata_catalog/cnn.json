@@ -44,7 +44,7 @@
 	  "datetime": "null",
 	  "start_datetime": "2018-10-01T01:08:32Z",
 	  "end_datetime": "2022-10-01T01:08:32Z",
-	  "license": "---",
+	  "license": "MIT",
 	  "providers": [
 		{
 		  "name": "EPS-IT",
