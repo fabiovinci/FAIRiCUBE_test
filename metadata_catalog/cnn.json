@@ -41,9 +41,9 @@
 	  ]
 	},
 	"properties": {
-	  "datetime": "2018-10-01T01:08:32Z",
-	  "start_datetime": "2023-02-05 09:15:06",
-	  "end_datetime": "2023-06-05 09:15:06",
+	  "datetime": "null",
+	  "start_datetime": "2018-10-01T01:08:32Z",
+	  "end_datetime": "2022-10-01T01:08:32Z",
 	  "license": "---",
 	  "providers": [
 		{
