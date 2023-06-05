@@ -121,7 +121,7 @@
 			"model-inference": 
 			{
       			"href": "./inferencing.yml",
-      			"type": "object; application=compose",
+      			"type": "object",
       			"title": "Model inferencing runtime",
       			"roles": [
         			"ml-model:inference-runtime"
@@ -133,7 +133,7 @@
 			"model-training":
 			{
 				"href": "./training.yml",
-				"type": "object; application=compose",
+				"type": "object",
 				"title": "Model training runtime",
 				"roles": [
         			"ml-model:training-runtime"
@@ -145,7 +145,7 @@
 			"model-checkpoint":
 			{
 				"href": "./model_link.h5",
-				"type": "object; application=compose",
+				"type": "object",
 				"title": "Model checkpoint",
 				"roles": [
         			"ml-model:checkpoint"
