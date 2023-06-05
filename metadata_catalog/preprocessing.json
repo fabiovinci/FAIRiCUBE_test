@@ -29,7 +29,7 @@
                     "$comment": "Require fields here for Item Properties.",
                     "required": [
                       "preprocessing:algorithm",
-                      "preprocessing:framework",
+                      "preprocessing:framework"
                     ]
                   },
                   {
