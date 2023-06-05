@@ -7,9 +7,6 @@
       {
         "allOf": [
           {
-            "$ref": "#/definitions/stac_extensions"
-          },
-          {
             "type": "object",
             "required": [
               "type",
