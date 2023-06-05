@@ -2,7 +2,7 @@
 	"stac_version": "1.0.0",
 	"stac_extensions": [
 	  "https://stac-extensions.github.io/ml-model/v1.0.0/schema.json",
-	  "https://github.com/fabiovinci/FAIRiCUBE_test/blob/main/metadata_catalog/preprocessing.json"
+	  "https://raw.githubusercontent.com/fabiovinci/FAIRiCUBE_test/main/metadata_catalog/preprocessing.json"
 	],
 	"type": "Feature",
 	"id": "ANN-CNN",
