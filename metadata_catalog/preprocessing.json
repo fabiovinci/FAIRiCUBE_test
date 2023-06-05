@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://github.com/fabiovinci/FAIRiCUBE_test/blob/main/metadata_catalog/schema.json",
+    "$id": "https://raw.githubusercontent.com/fabiovinci/FAIRiCUBE_test/main/metadata_catalog/preprocessing.json",
     "title": "Preprocessing Extension",
     "description": "STAC Preprocessing Extension for STAC Items.",
     "oneOf": [
