@@ -116,41 +116,37 @@
 		}
 	],
 	"assets":
-	[
+	
 		{
 			"model-inference": 
 			{
       			"href": "./inferencing.yml",
-      			"type": "object",
+      			"type":  "text/x-yaml; application=compose",
       			"title": "Model inferencing runtime",
       			"roles": [
         			"ml-model:inference-runtime"
       			]
-			}
-		},
+			},
 
-		{
 			"model-training":
 			{
 				"href": "./training.yml",
-				"type": "object",
+				"type":  "text/x-yaml; application=compose",
 				"title": "Model training runtime",
 				"roles": [
         			"ml-model:training-runtime"
       			]
-			}
-		},
+			},
 
-		{
 			"model-checkpoint":
 			{
-				"href": "./model_link.h5",
-				"type": "object",
+     				"href": "https://zenodo.org/record/5773331/files/last.ckpt?download=1",
+      				"type": "application/octet-stream",
 				"title": "Model checkpoint",
 				"roles": [
         			"ml-model:checkpoint"
       			]
 			}	
 		}
-	]
+
 }
