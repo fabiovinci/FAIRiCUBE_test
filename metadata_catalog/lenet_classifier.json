@@ -6,6 +6,7 @@
 	"type": "Feature",
 	"id": "lenet_classifier",
 	"collection": "ml-models-first",
+    "geometry": null,
 	"properties": {
 	  "datetime": "1998-01-01T00:00:00Z",
 	  "license": "cc-by-4.0",
@@ -66,12 +67,14 @@
         {
  			"rel": "self",
 			"href": "https://en.wikipedia.org/wiki/LeNet",
+            "type": "application/json",
 			"title": "reference-link"
         },
 
          {
  			"rel": "self",
 			"href": "https://github.com/cozzolinoac11/wildfire_prediction/blob/main/ann.ipynb",
+            "type": "application/json",
 			"title": "example"
         },
 
