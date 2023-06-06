@@ -47,6 +47,11 @@
 			"rel": "item",
 			"href": "./random_forest_regr.json",
 			"type": "application/json"
+		},
+		{
+			"rel": "item",
+			"href": "./lenet_classifier.json",
+			"type": "application/json"
 		}
 	]
 }
