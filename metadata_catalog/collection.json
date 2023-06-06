@@ -7,7 +7,7 @@
 	"id": "ml-models-first",
 	"title": "Models",
 	"description": "description",
-	"license": "---",
+	"license": "MIT",
 	"extent": {
 		"spatial": {
 			"bbox": [
