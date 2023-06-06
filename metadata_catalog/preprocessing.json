@@ -33,7 +33,7 @@
                     ]
                   },
                   {
-                    "$ref": "#/definitions/common_fields"
+                    //"$ref": "#/definitions/common_fields"
                   }
                 ]
               },
@@ -41,7 +41,7 @@
                 "$comment": "This validates the fields in Item Assets, but does not require them.",
                 "type": "object",
                 "additionalProperties": {
-                  "$ref": "#/definitions/common_fields"
+                  //"$ref": "#/definitions/common_fields"
                 }
               }
             }
@@ -83,7 +83,7 @@
                           "$ref": "#/definitions/require_any_field"
                         },
                         {
-                          "$ref": "#/definitions/common_fields"
+                          //"$ref": "#/definitions/common_fields"
                         }
                       ]
                     }
@@ -108,7 +108,7 @@
                           "$ref": "#/definitions/require_any_field"
                         },
                         {
-                          "$ref": "#/definitions/common_fields"
+                          //"$ref": "#/definitions/common_fields"
                         }
                       ]
                     }
@@ -124,7 +124,7 @@
             ],
             "properties": {
               "summaries": {
-                "$ref": "#/definitions/require_any_field"
+                //"$ref": "#/definitions/require_any_field"
               }
             }
           }
