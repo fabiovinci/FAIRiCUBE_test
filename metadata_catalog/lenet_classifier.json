@@ -99,7 +99,23 @@
         			"ml-model:checkpoint"
       			],
                 "description": "Keras model for wildfire or nowildfire classification. The model gets in input a dataset as numpy arrays (dimension 100x100x3) and returns the predicted labels."
-			}	
+			},
+
+            "reference-link":
+            {
+                   "href": "https://en.wikipedia.org/wiki/LeNet",
+                   "type": "application/json",
+                   "title": "reference-link"
+
+            },
+            
+            "example":
+            {
+                   "href": "https://github.com/cozzolinoac11/wildfire_prediction/blob/main/ann.ipynb",
+                   "type": "application/json",
+                   "title": "example"
+
+            }
 		}
 
 }
