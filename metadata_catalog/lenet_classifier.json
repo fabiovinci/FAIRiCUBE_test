@@ -31,10 +31,10 @@
         "ml-model:platform": "Google Colab",
         "ml-model:framework": [
             {
-                "name":"Tensorflow"
+                "":"Tensorflow"
             },
             {
-                "name":"keras"
+                "":"keras"
             }
         ]
 		
