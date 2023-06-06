@@ -87,7 +87,7 @@
             }
           },
           {
-            "$comment": "This is the schema for the fields in Item Asset Definitions. It doesn't require any fields.",
+            "$comment": "This is the schema for the fields in Item Asset Definitions. It doesn't require any fields",
             "required": [
               "item_assets"
             ],
