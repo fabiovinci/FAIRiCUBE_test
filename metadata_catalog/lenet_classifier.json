@@ -1,0 +1,127 @@
+{
+	"stac_version": "1.0.0",
+	"stac_extensions": [
+	  "https://stac-extensions.github.io/ml-model/v1.0.0/schema.json",
+	  "https://raw.githubusercontent.com/fabiovinci/FAIRiCUBE_test/main/metadata_catalog/preprocessing.json"
+	],
+	"type": "Feature",
+	"id": "lenet_classifier",
+	"collection": "ml-models-first",
+	"properties": {
+	  "datetime": "1998-01-01T00:00:00Z",
+	  "license": "MIT",
+	  "providers": [
+		{
+		  "name": "EPS-IT",
+		  "roles": [
+			"producer"
+		  ],
+		  "email": "xyz@epsilon-italia.it",
+		  "url": "https://www.epsilon-italia.it/"
+		}
+	  	],
+        "description": "Multi-layer Convolutional Neural Network for image classification",
+        "main-category": "Deep Learning",
+		"ml-model:type": "ml-model",
+		"ml-model:learning_approach": "supervised",
+		"ml-model:prediction_type": "classification",
+		"ml-model:architecture": "CNN",
+		"ml-model:training-processor-type": "gpu",
+		"ml-model:training-os": "linux",
+        "ml-model:platform": "Google Colab",
+        "ml-model:framework": [
+            {
+                "name":"Tensorflow"
+            },
+            {
+                "name":"keras"
+            }
+        ]
+		
+	},
+
+	"links": 
+	[
+		{
+			"rel": "root",
+			"href": "./collection.json",
+			"type": "application/json",
+			"title": "Root Catalog"
+		},
+
+		{
+			"rel": "parent",
+			"href": "./collection.json",
+			"type": "application/json",
+			"title": "Root Catalog"
+		},
+
+		{
+			"rel": "collection",
+			"href": "./collection.json",
+			"type": "application/json"
+		},
+		
+		{
+			"rel": "ml-model:inferencing-image",
+			"href": "--docker_link--",
+			"type": "docker-image",
+			"title": "model"
+		},
+
+		{
+			"rel": "ml-model:training-image",
+			"href": "--docker_link--",
+			"type": "docker-image",
+			"title": "image_for_training_model"
+		},
+
+		{
+			"rel": "ml-model:train-data",
+			"href": "data_json_link",
+			"type": "application/json",
+			"title": "training_data"
+		},
+
+		{
+			"rel": "ml-model:test-data",
+			"href": "data_json_link",
+			"type": "application/json",
+			"title": "test_data"		
+		}
+	],
+	"assets":
+	
+		{
+			"model-inference": 
+			{
+      			"href": "./inferencing.yml",
+      			"type":  "text/x-yaml; application=compose",
+      			"title": "Model inferencing runtime",
+      			"roles": [
+        			"ml-model:inference-runtime"
+      			]
+			},
+
+			"model-training":
+			{
+				"href": "./training.yml",
+				"type":  "text/x-yaml; application=compose",
+				"title": "Model training runtime",
+				"roles": [
+        			"ml-model:training-runtime"
+      			]
+			},
+
+			"model-checkpoint":
+			{
+     				"href": "https://zenodo.org/record/5773331/files/last.ckpt?download=1",
+      				"type": "application/octet-stream",
+				"title": "Model checkpoint",
+				"roles": [
+        			"ml-model:checkpoint"
+      			]
+			}	
+		}
+
+}
