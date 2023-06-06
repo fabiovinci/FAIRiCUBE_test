@@ -31,9 +31,6 @@
                       "preprocessing:algorithm",
                       "preprocessing:framework"
                     ]
-                  },
-                  {
-                    //"$ref": "#/definitions/common_fields"
                   }
                 ]
               },
@@ -81,9 +78,6 @@
                       "allOf": [
                         {
                           "$ref": "#/definitions/require_any_field"
-                        },
-                        {
-                          //"$ref": "#/definitions/common_fields"
                         }
                       ]
                     }
@@ -106,9 +100,6 @@
                       "allOf": [
                         {
                           "$ref": "#/definitions/require_any_field"
-                        },
-                        {
-                          //"$ref": "#/definitions/common_fields"
                         }
                       ]
                     }
@@ -121,12 +112,7 @@
             "$comment": "This is the schema for the fields in Summaries. By default, only checks the existance of the properties, but not the schema of the summaries.",
             "required": [
               "summaries"
-            ],
-            "properties": {
-              "summaries": {
-                //"$ref": "#/definitions/require_any_field"
-              }
-            }
+            ]
           }
         ]
       }
