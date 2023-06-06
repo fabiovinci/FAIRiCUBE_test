@@ -1,15 +1,14 @@
 {
 	"stac_version": "1.0.0",
 	"stac_extensions": [
-	  "https://stac-extensions.github.io/ml-model/v1.0.0/schema.json",
-	  "https://raw.githubusercontent.com/fabiovinci/FAIRiCUBE_test/main/metadata_catalog/preprocessing.json"
+	  "https://stac-extensions.github.io/ml-model/v1.0.0/schema.json"
 	],
 	"type": "Feature",
 	"id": "lenet_classifier",
 	"collection": "ml-models-first",
 	"properties": {
 	  "datetime": "1998-01-01T00:00:00Z",
-	  "license": "MIT",
+	  "license": "cc-by-4.0",
 	  "providers": [
 		{
 		  "name": "EPS-IT",
@@ -30,14 +29,16 @@
 		"ml-model:training-os": "linux",
         "ml-model:platform": "Google Colab",
         "ml-model:framework": [
-            {
-                "":"Tensorflow"
-            },
-            {
-                "":"keras"
-            }
+            "tensorflow",
+            "keras"
+        ],
+        "ml-model:algorithm":"Lenet",
+        "ml-model:performance": "Accuracy score: 0.9505 (validation). Running time: 2 min for 23 training epochs with early stopping (total number of epochs: 50) on a gpu Nvidia a100. Modified hyperparameters: Input shape: (100,100,3); Optimizer: 'adam'; batch size: 128. Train-test-valid split: 70-15-15. Loss function: sparse_categorical_crossentropy.",
+        "keywords": [
+            "classification", 
+            "CNN",
+            "LeNet"
         ]
-		
 	},
 
 	"links": 
@@ -61,66 +62,40 @@
 			"href": "./collection.json",
 			"type": "application/json"
 		},
-		
-		{
-			"rel": "ml-model:inferencing-image",
-			"href": "--docker_link--",
-			"type": "docker-image",
-			"title": "model"
-		},
 
-		{
-			"rel": "ml-model:training-image",
-			"href": "--docker_link--",
-			"type": "docker-image",
-			"title": "image_for_training_model"
-		},
+        {
+ 			"rel": "self",
+			"href": "https://en.wikipedia.org/wiki/LeNet",
+			"title": "reference-link"
+        },
+
+         {
+ 			"rel": "self",
+			"href": "https://github.com/cozzolinoac11/wildfire_prediction/blob/main/ann.ipynb",
+			"title": "example"
+        },
 
 		{
 			"rel": "ml-model:train-data",
-			"href": "data_json_link",
+			"href": "https://public.epsilon-italia.it/FAIRiCUBE/wildfire-classification/data_numpy.zip",
 			"type": "application/json",
-			"title": "training_data"
-		},
-
-		{
-			"rel": "ml-model:test-data",
-			"href": "data_json_link",
-			"type": "application/json",
-			"title": "test_data"		
+			"title": "input data used",
+            "description": "Numpy arrays. (Perfectly) balanced classes."
 		}
+
 	],
 	"assets":
 	
 		{
-			"model-inference": 
-			{
-      			"href": "./inferencing.yml",
-      			"type":  "text/x-yaml; application=compose",
-      			"title": "Model inferencing runtime",
-      			"roles": [
-        			"ml-model:inference-runtime"
-      			]
-			},
-
-			"model-training":
-			{
-				"href": "./training.yml",
-				"type":  "text/x-yaml; application=compose",
-				"title": "Model training runtime",
-				"roles": [
-        			"ml-model:training-runtime"
-      			]
-			},
-
 			"model-checkpoint":
 			{
-     				"href": "https://zenodo.org/record/5773331/files/last.ckpt?download=1",
-      				"type": "application/octet-stream",
+     			"href": "http://www.epsilon-italia.it/public/model.zip",
+      			"type": "application/octet-stream",
 				"title": "Model checkpoint",
 				"roles": [
         			"ml-model:checkpoint"
-      			]
+      			],
+                "description": "Keras model for wildfire or nowildfire classification. The model gets in input a dataset as numpy arrays (dimension 100x100x3) and returns the predicted labels."
 			}	
 		}
 
