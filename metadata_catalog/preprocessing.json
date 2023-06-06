@@ -36,10 +36,7 @@
               },
               "assets": {
                 "$comment": "This validates the fields in Item Assets, but does not require them.",
-                "type": "object",
-                "additionalProperties": {
-                  //"$ref": "#/definitions/common_fields"
-                }
+                "type": "object"
               }
             }
           }
@@ -107,12 +104,6 @@
                 }
               }
             }
-          },
-          {
-            "$comment": "This is the schema for the fields in Summaries. By default, only checks the existance of the properties, but not the schema of the summaries.",
-            "required": [
-              "summaries"
-            ]
           }
         ]
       }
