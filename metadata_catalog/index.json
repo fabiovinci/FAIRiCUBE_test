@@ -2,7 +2,7 @@
     "type": "Catalog",
     "stac_version": "1.0.0",
     "id": "fairicube-hub-metadata-catalog",
-    "title": "FAIRiCUBE Metadata Catalog"
+    "title": "FAIRiCUBE Metadata Catalog",
     "description": "A STAC catalog that contains all metadata collections available on the FAIRiCUBE Hub.",
     "links": [
         {
