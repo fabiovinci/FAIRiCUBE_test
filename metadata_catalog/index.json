@@ -16,7 +16,7 @@
             "type": "application/json"
         },
         {
-            "id": "Models",
+            "id": "ml-models-first",
             "href": "./collection.json",
             "rel": "child",
             "type": "application/json"
