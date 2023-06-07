@@ -1,8 +1,9 @@
 {
     "type": "Catalog",
     "stac_version": "1.0.0",
-    "id": "fairicube-hub-resource-catalog",
-    "description": "A STAC catalog that contains all resource collections available on the FAIRiCUBE Hub.",
+    "id": "fairicube-hub-metadata-catalog",
+    "title": "FAIRiCUBE Metadata Catalog"
+    "description": "A STAC catalog that contains all metadata collections available on the FAIRiCUBE Hub.",
     "links": [
         {
             "href": "./index.json",
@@ -15,7 +16,7 @@
             "type": "application/json"
         },
         {
-            "id": "ERA5_WIND_V",
+            "id": "Models",
             "href": "./collection.json",
             "rel": "child",
             "type": "application/json"
