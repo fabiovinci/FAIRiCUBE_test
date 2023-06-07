@@ -55,7 +55,7 @@
 		  "url": "https://www.epsilon-italia.it/"
 		}
 	  	],
-		"main-category": "Machine Learning",
+		"custom:main-category": "Machine Learning",
 		"ml-model:type": "ml-model",
 		"ml-model:learning_approach": "supervised",
 		"ml-model:prediction_type": "classification",
