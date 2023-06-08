@@ -53,15 +53,15 @@
 		},
 		{
 			"href": "https://en.wikipedia.org/wiki/LeNet",
-      		"rel": "about",
-      		"type": "text/html",
-      		"title": "Reference link"
+      			"rel": "about",
+      			"type": "text/html",
+      			"title": "Reference link"
 		},
 		{
 			"href": "https://github.com/cozzolinoac11/wildfire_prediction/blob/main/ann.ipynb",
-      		"rel": "about",
-      		"type": "text/html",
-      		"title": "Example"
+      			"rel": "about",
+      			"type": "text/html",
+      			"title": "Example"
 		}
 	],
 	"assets": {
@@ -71,7 +71,7 @@
 			"title": "Input data used",
 			"description": "Numpy arrays. (Perfectly) balanced classes."
 		},
-		"Output data obtained": {
+		"model-checkpoint": {
      			"href": "https://zenodo.org/record/5773331/files/last.ckpt?download=1",
       			"type": "application/octet-stream",
 			"title": "Model",
