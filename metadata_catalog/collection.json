@@ -39,11 +39,6 @@
 		},
 		{
 			"rel": "item",
-			"href": "./cnn.json",
-			"type": "application/json"
-		},
-		{
-			"rel": "item",
 			"href": "./lenet.json",
 			"type": "application/json"
 		}
