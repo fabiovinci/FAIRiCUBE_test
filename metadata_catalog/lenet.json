@@ -5,7 +5,6 @@
 	],
 	"type": "Feature",
 	"id": "LeNet",
-	"collection": "ml-models-first",
 	"title": "LeNet Classifier",
 	"description": "Multi-layer Convolutional Neural Network for image classification",
 	"keywords": [
@@ -13,6 +12,7 @@
 		"CNN", 
 		"LeNet"
 	],
+	"collection": "ml-models-first",
 	"geometry": null,
 	"properties": {
 		"main_category": "Deep Learing",
