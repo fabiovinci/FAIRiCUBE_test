@@ -31,7 +31,7 @@
 		"ml-model:prediction_type": "classification",
 		"ml-model:architecture": "CNN",
 		"ml-model:training-processor-type": "gpu",
-		"ml-model:training-os": "linux",
+		"ml-model:training-os": "linux"
 	},
 	"links": [
 		{
@@ -69,7 +69,7 @@
 			"href": "https://public.epsilon-italia.it/FAIRiCUBE/wildfire-classification/data_numpy.zip",
       		"type": "application/json",
 			"title": "Input data used",
-			"description": "Numpy arrays. (Perfectly) balanced classes.",
+			"description": "Numpy arrays. (Perfectly) balanced classes."
 		},
 		"Output data obtained": {
      		"href": "http://www.epsilon-italia.it/public/model.zip",
