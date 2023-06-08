@@ -148,6 +148,8 @@
      				"href": "https://zenodo.org/record/5773331/files/last.ckpt?download=1",
       				"type": "application/octet-stream",
 				"title": "Model checkpoint",
+				"description": "Prova",
+				"performance": "prova",
 				"roles": [
         			"ml-model:checkpoint"
       			]
