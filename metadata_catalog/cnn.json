@@ -45,6 +45,10 @@
 	  "start_datetime": "2018-10-01T01:08:32Z",
 	  "end_datetime": "2022-10-01T01:08:32Z",
 	  "license": "MIT",
+	  "keywords": [
+		  "CNN",
+		  "DL"
+	  ],
 	  "providers": [
 		{
 		  "name": "EPS-IT",
