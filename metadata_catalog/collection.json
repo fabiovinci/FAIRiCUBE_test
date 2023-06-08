@@ -5,11 +5,11 @@
 	],
 	"type": "Collection",
 	"id": "ml-models-first",
-	"title": "Models",
-	"description": "description",
+	"title": "Machine and Deep Learning models",
+	"description": "Collection containing machine and deep learning models. The values are test values and are not based on actual use cases.",
 	"keywords": [
-		"DL",
-		"CNN"
+		"Deep Learning",
+		"Machine Learning"
 	],
 	"license": "MIT",
 	"extent": {
@@ -26,8 +26,8 @@
 		"temporal": {
 			"interval": [
 				[
-					"2018-10-01T01:08:32Z",
-					"2022-10-01T01:08:32Z"
+					"2000-01-01T01:08:32Z",
+					"2025-01-01T01:08:32Z"
 				]
 			]
 		}
@@ -40,21 +40,6 @@
 		{
 			"rel": "item",
 			"href": "./cnn.json",
-			"type": "application/json"
-		},
-		{
-			"rel": "item",
-			"href": "./decision_tree_clf.json",
-			"type": "application/json"
-		},
-		{
-			"rel": "item",
-			"href": "./random_forest_regr.json",
-			"type": "application/json"
-		},
-		{
-			"rel": "item",
-			"href": "./lenet_classifier.json",
 			"type": "application/json"
 		},
 		{
