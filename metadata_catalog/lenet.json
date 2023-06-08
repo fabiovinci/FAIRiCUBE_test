@@ -14,8 +14,14 @@
 		"LeNet"
 	],
 	"geometry": null,
-	
-		
+	"properties": {
+		"title": "LeNet Classifier",
+		"description": "Multi-layer Convolutional Neural Network for image classification",
+		"keywords": [
+			"classification", 
+			"CNN", 
+			"LeNet"
+		],
 		"main_category": "Deep Learing",
 		"datetime": null,
 	  	"start_datetime": "2018-10-01T01:08:32Z",
@@ -33,7 +39,7 @@
 		"ml-model:architecture": "CNN",
 		"ml-model:training-processor-type": "gpu",
 		"ml-model:training-os": "linux"
-
+	},
 	"links": [
 		{
 			"rel": "root",
