@@ -5,11 +5,11 @@
 	  "https://stac-extensions.github.io/ml-model/v1.0.0/schema.json"
 	],
 	"id": "LeNet",
-	"title": "LeNet Classifier",
-	"description": "Multi-layer Convolutional Neural Network for image classification",
 	"collection": "ml-models-first",
 	"geometry": null,
 	"properties": {
+		"title": "LeNet Classifier",
+		"description": "Multi-layer Convolutional Neural Network for image classification",
 		"main_category": "Deep Learing",
 		"datetime": null,
 	  	"start_datetime": "2018-10-01T01:08:32Z",
