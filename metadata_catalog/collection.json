@@ -52,6 +52,11 @@
 			"rel": "item",
 			"href": "./lenet_classifier.json",
 			"type": "application/json"
+		},
+		{
+			"rel": "item",
+			"href": "./lenet.json",
+			"type": "application/json"
 		}
 	]
 }
