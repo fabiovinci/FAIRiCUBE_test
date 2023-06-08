@@ -65,11 +65,14 @@
 		}
 	],
 	"assets": {
-		"Input data used": {
+		"input-data-used": {
 			"href": "https://public.epsilon-italia.it/FAIRiCUBE/wildfire-classification/data_numpy.zip",
       		"type": "application/json",
 			"title": "Input data used",
-			"description": "Numpy arrays. (Perfectly) balanced classes."
+			"description": "Numpy arrays. (Perfectly) balanced classes.",
+			"roles": [
+				"data"
+      		]
 		},
 		"model-checkpoint": {
      		"href": "http://www.epsilon-italia.it/public/model.zip",
