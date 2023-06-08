@@ -15,6 +15,11 @@
 		"datetime": null,
 	  	"start_datetime": "2018-10-01T01:08:32Z",
 	  	"end_datetime": "2022-10-01T01:08:32Z",
+	  	"keywords": [
+			"classification", 
+			"CNN", 
+			"LeNet"
+		],
 	  	"platform": "Google Colab",
 	  	"framework" : [
 	  		"Tensorflow", 
@@ -80,10 +85,5 @@
         			"ml-model:checkpoint"
       		]
 		}
-	},
-	"keywords": [
-		"classification", 
-		"CNN", 
-		"LeNet"
-	],
+	}
 }
