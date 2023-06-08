@@ -5,6 +5,7 @@
 	],
 	"type": "Feature",
 	"id": "LeNet",
+	"collection": "ml-models-first",
 	"title": "LeNet Classifier",
 	"description": "Multi-layer Convolutional Neural Network for image classification",
 	"keywords": [
@@ -12,9 +13,15 @@
 		"CNN", 
 		"LeNet"
 	],
-	"collection": "ml-models-first",
 	"geometry": null,
 	"properties": {
+		"title": "LeNet Classifier",
+		"description": "Multi-layer Convolutional Neural Network for image classification",
+		"keywords": [
+			"classification", 
+			"CNN", 
+			"LeNet"
+		],
 		"main_category": "Deep Learing",
 		"datetime": null,
 	  	"start_datetime": "2018-10-01T01:08:32Z",
@@ -53,36 +60,36 @@
 		},
 		{
 			"href": "https://en.wikipedia.org/wiki/LeNet",
-      			"rel": "about",
-      			"type": "text/html",
-      			"title": "Reference link"
+      		"rel": "about",
+      		"type": "text/html",
+      		"title": "Reference link"
 		},
 		{
 			"href": "https://github.com/cozzolinoac11/wildfire_prediction/blob/main/ann.ipynb",
-      			"rel": "about",
-      			"type": "text/html",
-      			"title": "Example"
+      		"rel": "about",
+      		"type": "text/html",
+      		"title": "Example"
 		}
 	],
 	"assets": {
 		"input-data-used": {
 			"href": "https://public.epsilon-italia.it/FAIRiCUBE/wildfire-classification/data_numpy.zip",
-      			"type": "application/json",
+      		"type": "application/json",
 			"title": "Input data used",
 			"description": "Numpy arrays. (Perfectly) balanced classes.",
 			"roles": [
 				"data"
-      			]
+      		]
 		},
 		"model-checkpoint": {
-     			"href": "http://www.epsilon-italia.it/public/model.zip",
-      			"type": "application/octet-stream",
+     		"href": "http://www.epsilon-italia.it/public/model.zip",
+      		"type": "application/octet-stream",
 			"title": "Model",
 			"description": "Keras model for wildfire or nowildfire classification. The model gets in input a dataset as numpy arrays (dimension 100x100x3) and returns the predicted labels.",
 			"performance": "Accuracy score: 0.9505 (validation). Running time: 2 min for 23 training epochs with early stopping (total number of epochs: 50) on a gpu Nvidia a100. Modified hyperparameters: Input shape: (100,100,3); Optimizer: 'adam'; batch size: 128. Train-test-valid split: 70-15-15. Loss function: sparse_categorical_crossentropy.",
 			"roles": [
         			"ml-model:checkpoint"
-      			]
+      		]
 		}
 	}
 }
