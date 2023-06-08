@@ -1,11 +1,11 @@
 {
+	"type": "Feature",
 	"stac_version": "1.0.0",
 	"stac_extensions": [
 	  "https://stac-extensions.github.io/ml-model/v1.0.0/schema.json"
 	],
-	"type": "Feature",
 	"id": "LeNet",
-	"collection": "ml-models-first",
+	"datasource_type": "byoc-484d8dbb-9e3e-41f2-b96b-35189d3ae37f",
 	"title": "LeNet Classifier",
 	"description": "Multi-layer Convolutional Neural Network for image classification",
 	"keywords": [
@@ -13,15 +13,9 @@
 		"CNN", 
 		"LeNet"
 	],
+	"collection": "ml-models-first",
 	"geometry": null,
 	"properties": {
-		"title": "LeNet Classifier",
-		"description": "Multi-layer Convolutional Neural Network for image classification",
-		"keywords": [
-			"classification", 
-			"CNN", 
-			"LeNet"
-		],
 		"main_category": "Deep Learing",
 		"datetime": null,
 	  	"start_datetime": "2018-10-01T01:08:32Z",
