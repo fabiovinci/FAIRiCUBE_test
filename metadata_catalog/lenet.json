@@ -5,7 +5,6 @@
 	  "https://stac-extensions.github.io/ml-model/v1.0.0/schema.json"
 	],
 	"id": "LeNet",
-	"datasource_type": "byoc-484d8dbb-9e3e-41f2-b96b-35189d3ae37f",
 	"title": "LeNet Classifier",
 	"description": "Multi-layer Convolutional Neural Network for image classification",
 	"collection": "ml-models-first",
