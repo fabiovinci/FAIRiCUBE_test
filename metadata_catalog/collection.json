@@ -7,6 +7,10 @@
 	"id": "ml-models-first",
 	"title": "Models",
 	"description": "description",
+	"keywords": [
+		"DL",
+		"CNN"
+	]
 	"license": "MIT",
 	"extent": {
 		"spatial": {
