@@ -72,7 +72,7 @@
 			"description": "Numpy arrays. (Perfectly) balanced classes."
 		},
 		"model-checkpoint": {
-     			"href": "https://zenodo.org/record/5773331/files/last.ckpt?download=1",
+     			"href": "http://www.epsilon-italia.it/public/model.zip",
       			"type": "application/octet-stream",
 			"title": "Model",
 			"description": "Keras model for wildfire or nowildfire classification. The model gets in input a dataset as numpy arrays (dimension 100x100x3) and returns the predicted labels.",
