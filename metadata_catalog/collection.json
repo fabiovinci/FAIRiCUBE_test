@@ -41,6 +41,11 @@
 			"rel": "item",
 			"href": "./lenet.json",
 			"type": "application/json"
+		},
+		{
+			"rel": "item",
+			"href": "./Crop-Classification-CNN.json",
+			"type": "application/json"
 		}
 	]
 }
