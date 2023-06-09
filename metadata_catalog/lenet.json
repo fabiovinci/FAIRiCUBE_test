@@ -61,7 +61,8 @@
 			"href": "https://github.com/cozzolinoac11/wildfire_prediction/blob/main/ann.ipynb",
       		"rel": "about",
       		"type": "text/html",
-      		"title": "Example"
+      		"title": "Example",
+		"description": "Description"
 		}
 	],
 	"assets": {
