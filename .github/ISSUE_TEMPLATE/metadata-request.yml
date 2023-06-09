@@ -234,6 +234,7 @@ body:
       value: |-
         1. KeywordA
         2. KeywordB
+      render: bash
     validations:
       required: true
   # reference-link
