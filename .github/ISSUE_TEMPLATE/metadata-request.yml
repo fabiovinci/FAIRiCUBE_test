@@ -261,9 +261,6 @@ body:
       description: |-
         Link to input data/metadata, helpful for a better understanding of context and domain.
         To insert the values, delete 'Link-1', 'Link-2' etc. and, keeping the number of the bulleted list, insert the various links.
-        For example:
-          1. www.link1.com
-          2. www.link2.com
       value: |-
         1. Link-1
         2. Link-2
@@ -280,6 +277,7 @@ body:
         The field contains a textual description of the main characteristics of each input data to the resource.
         This field will also include e.g., description of sampling techniques, version of the data (if multiple versions are available), and, in the case of ML resources, also
         the percentages of training, validation and testing sets. This field may contain details on the suitability of the resource for the chosen geographic area and thematic context.
+        To insert values, delete 'Characteristics of the Link-1', 'Characteristics of the Link-2' etc. and, keeping the number in the bulleted list, enter the characteristics of the input data. Each characteristic refers to the respective link, in the same position, in the input data field. E.g. the characteristic in 1. refers to the link in 1.
       value: |-
         1. Characteristics of the Link-1
         2. Characteristics of the Link-2
