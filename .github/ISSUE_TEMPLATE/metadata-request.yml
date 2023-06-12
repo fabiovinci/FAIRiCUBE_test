@@ -254,11 +254,16 @@ body:
     validations:
       required: false
   # input-data
-  - type: input
+  - type: textarea
     id: input-data
     attributes:
-      label: Input data
+      label: Input data used
       description: Link to input data/metadata, helpful for a better understanding of context and domain.
+    value: |-
+        1. Link-1
+        2. Link-2
+        ...
+        n. Link-n
     validations:
       required: true
   # Characteristics of input data
