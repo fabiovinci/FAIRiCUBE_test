@@ -277,7 +277,7 @@ body:
         the percentages of training, validation and testing sets. This field may contain details on the suitability of the resource for the chosen geographic area and thematic context.
       value: |-
         1. Characteristics of the Link-1
-        2. Characteristics of theLink-2
+        2. Characteristics of the Link-2
         ...
         n. Characteristics of the Link-n
     validations:
