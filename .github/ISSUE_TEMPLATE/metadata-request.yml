@@ -300,7 +300,8 @@ body:
     id: output-data
     attributes:
       label: Output data obtained
-      description: Link to output data/metadata.
+      description: Link to output data/metadata. To insert the values, delete 'Link-1', 'Link-2' etc. and, keeping the number of the bulleted list, insert the various links.
+
       value: |-
         1. Link-1
         2. Link-2
