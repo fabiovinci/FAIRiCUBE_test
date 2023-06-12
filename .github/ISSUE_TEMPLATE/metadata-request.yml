@@ -262,6 +262,7 @@ body:
       value: |-
         1. Link-1
         2. Link-2
+        ...
         n. Link-n
     validations:
       required: true
