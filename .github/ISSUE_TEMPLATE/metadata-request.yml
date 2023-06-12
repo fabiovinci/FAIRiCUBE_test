@@ -258,7 +258,12 @@ body:
     id: input-data
     attributes:
       label: Input data used
-      description: Link to input data/metadata, helpful for a better understanding of context and domain.
+      description: |-
+        Link to input data/metadata, helpful for a better understanding of context and domain.
+        To insert the values, delete 'Link-1', 'Link-2' etc. and, keeping the number of the bulleted list, insert the various links.
+        For example:
+          1. www.link1.com
+          2. www.link2.com
       value: |-
         1. Link-1
         2. Link-2
