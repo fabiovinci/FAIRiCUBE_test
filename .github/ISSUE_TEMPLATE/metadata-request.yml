@@ -4,7 +4,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        Please provide the information requested below. Mandatory elements are marked with `*`.
+        Please provide the information requested below for the resource. Mandatory elements are marked with `*`.
+        Resource can be the algorithm, the model, or the pre-processing pipeline.
   - type: markdown
     attributes:
       value: |-
@@ -43,10 +44,11 @@ body:
         Notice that the codelist contains also some specific elements to further specify the resource (e.g., "DL" as a special case of "ML"). 
       multiple: false
       options:
-        - ML
-        - DL
+        - Machine Learning
+        - Deep Learning
         - Pre-processing
         - Ingestion
+        - Analytics
     validations:
       required: true
   # other category
@@ -54,7 +56,7 @@ body:
     id: other-category
     attributes:
       label: Other category
-      description: This element should be used to categorise the resource according to possible vocabularie
+      description: This element should be used to categorise the resource according to possible vocabularie. The codelist is not yet available.
       multiple: true
       options:
         - A
@@ -88,6 +90,8 @@ body:
         - feature-scaling
         - dataset-balancing
         - data-transformation
+        - analytics
+        - clustering
     validations:
       required: true
   # platform
@@ -128,6 +132,9 @@ body:
         - Theano
         - imblearn
         - pillow
+        - Rasdaman
+        - MXNet
+        - Apache-Spark
     validations:
       required: true
   # architecture
@@ -141,11 +148,21 @@ body:
       multiple: false
       options:
         - random-forest
-        - cnn
+        - dnn
         - decision-tree
         - ensemble
         - gradient-based
         - density-based
+        - datacubes
+        - RNN – Recurrent-Neural-Network
+        - CNN – Convolutional-Neural-Network
+        - Feed-Forward-Neural-Network
+        - DBN – Deep-Belief-Network
+        - DSN – Deep-Stacking-Network
+        - SVM – Support-Vector-Machine
+        - probabilistic-model
+        - Perceptron
+        - Multilayer-Perceptron
     validations:
       required: false
   # approach
@@ -176,19 +193,22 @@ body:
         - Convolutional-Neural-Network
         - K-means
         - Min-max-normalization
-        - DBSCAN
+        - DBSCAN - Density-Based-Spatial-Clustering-of-Applications-with-Noise
         - Decision-Tree-Classifier
         - Random-Forest-Regression
-        - SGD
-        - KNN
+        - SGD-Classifier – Stochastic-Gradient-Descent
+        - KNN-Classifier – K-nearest-neighbors
         - SegNet
         - LeNet
         - Decision-Tree-Regression
         - Voting-Classifier
         - AdaBoost-Classifier
         - AdaBoost-Regression
-        - SMOTE
+        - SMOTE – Synthetic-Minority-Oversampling-TEchnique
         - custom-method
+        - WCPS
+        - Logistic-Regression
+        - Naive-Bayes
     validations:
       required: true
   # processor
@@ -220,6 +240,7 @@ body:
         - cygwin
         - darwin
         - macOS
+        - windows
     validations:
       required: true
   # keyword
@@ -230,10 +251,8 @@ body:
       description: |-
         A series of keywords which can facilitate the resource discoverability.
         These keywords can be used for a quick search of resources and should highlight foremost characteristics of the resource.  
-        For the categorization of the resources via keywords to be effective, we recommend that a maximum of 5 keywords is provided. 
-      value: |-
-        1. Keyword-1
-        2. Keyword-2
+        For the categorization of the resources via keywords to be effective, we recommend that a maximum of 5 keywords is provided.
+      value: Keyword-1, Keyword-2, ... , Keyword-5
     validations:
       required: true
   # reference-link
@@ -257,8 +276,8 @@ body:
     id: input-data
     attributes:
       label: Input data used
-      description: |-
-        Link to input data/metadata, helpful for a better understanding of context and domain.
+      description: |- 
+        Link to data (or related metadata) to which the a/p resource has been applied. This information is required for a better understanding of context and domain of the a/p resource.
         To insert the values, delete 'Link-1', 'Link-2' etc. and, keeping the number of the bulleted list, insert the various links.
       value: |-
         1. Link-1
@@ -300,8 +319,9 @@ body:
     id: output-data
     attributes:
       label: Output data obtained
-      description: Link to output data/metadata. To insert the values, delete 'Link-1', 'Link-2' etc. and, keeping the number of the bulleted list, insert the various links.
-
+      description: |-
+        Link to output data (or related metadata) produced by execution of the a/p resource. This information is required for a better understanding of the a/p resource.
+        To insert the values, delete 'Link-1', 'Link-2' etc. and, keeping the number of the bulleted list, insert the various links.
       value: |-
         1. Link-1
         2. Link-2
@@ -315,13 +335,13 @@ body:
     attributes:
       label: Characteristics of output data
       description: |-
-        Textual description of the output data from the resource.
+        Textual description of the output data from the resource.         
         To insert values, delete 'Characteristics of the Link-1', 'Characteristics of the Link-2' etc. and, keeping the number in the bulleted list, enter the characteristics of the input data. Each characteristic refers to the respective link, in the same position, in the input data field. E.g. the characteristic in 1. refers to the link in 1.
       value: |-
         1. Characteristics of the Link-1
         2. Characteristics of the Link-2
         ...
-        n. Characteristics of the Link-n 
+        n. Characteristics of the Link-n
     validations:
       required: true
   # performance
