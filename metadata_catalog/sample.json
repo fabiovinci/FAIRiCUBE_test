@@ -10,7 +10,7 @@
     "properties": {
         "title": "STAC-generation",
         "description": "Issue per provare la generazione di file JSON - STAC",
-        "null": "Machine Learning",
+        "main-category": "Machine Learning",
         "datetime": "14-06-2023T01:08:32Z",
         "keywords": [
             "classification",
