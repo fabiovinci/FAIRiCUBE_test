@@ -11,7 +11,7 @@
         "title": "STAC-generation",
         "description": "Issue per provare la generazione di file JSON - STAC",
         "main-category": "Machine Learning",
-        "datetime": "2023-06-14T01:08:32Z",
+        "datetime": "14-06-2023T01:08:32Z",
         "keywords": [
             "classification",
             "decision-tree",
@@ -36,5 +36,40 @@
         "ml-model:architecture": "decision-tree",
         "ml-model:training-processor-type": "cpu",
         "ml-model:training-os": "windows"
-    }
+    },
+    "links": [
+        {
+            "rel": "root",
+            "href": "./collection.json",
+            "type": "application/json",
+            "title": "Root Catalog"
+        },
+        {
+            "rel": "parent",
+            "href": "./collection.json",
+            "type": "application/json",
+            "title": "Root Catalog"
+        },
+        {
+            "rel": "collection",
+            "href": "./collection.json",
+            "type": "application/json"
+        },
+        {
+            "href": [
+                "www.prova.com"
+            ],
+            "rel": "about",
+            "type": "text/html",
+            "title": "Reference link"
+        },
+        {
+            "href": [
+                "www.example.com"
+            ],
+            "rel": "about",
+            "type": "text/html",
+            "title": "Example"
+        }
+    ]
 }
