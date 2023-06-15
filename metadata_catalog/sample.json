@@ -56,17 +56,13 @@
             "type": "application/json"
         },
         {
-            "href": [
-                "www.prova.com"
-            ],
+            "href": "www.prova.com",
             "rel": "about",
             "type": "text/html",
             "title": "Reference link"
         },
         {
-            "href": [
-                "www.example.com"
-            ],
+            "href": "www.example.com",
             "rel": "about",
             "type": "text/html",
             "title": "Example"
