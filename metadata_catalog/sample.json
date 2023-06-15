@@ -1,1 +1,40 @@
-{"type": "Feature", "stac_version": "1.0.0", "stac_extensions": ["https://stac-extensions.github.io/ml-model/v1.0.0/schema.json"], "id": "stac-generation", "collection": "ml-models", "geometry": "null", "properties": {"title": "STAC-generation", "description": "Issue per provare la generazione di file JSON - STAC", "main-category": "Machine Learning", "datetime": "14-06-2023T01:08:32Z", "keywords": ["classification", "decision-tree", "azure", "scikit-learn", "windows"], "platform": ["Microsoft Azure"], "framework": ["Scikit-learn", "Numpy"], "algorithm": "Decision-Tree-Classifier", "license": "MIT", "ml-model:type": "ml-model", "ml-model:learning_approach": "supervised", "ml-model:prediction_type": ["classification"], "ml-model:architecture": "decision-tree", "ml-model:training-processor-type": "cpu", "ml-model:training-os": "windows"}}
+{
+    "type": "Feature",
+    "stac_version": "1.0.0",
+    "stac_extensions": [
+        "https://stac-extensions.github.io/ml-model/v1.0.0/schema.json"
+    ],
+    "id": "stac-generation",
+    "collection": "ml-models",
+    "geometry": "null",
+    "properties": {
+        "title": "STAC-generation",
+        "description": "Issue per provare la generazione di file JSON - STAC",
+        "null": "Machine Learning",
+        "datetime": "14-06-2023T01:08:32Z",
+        "keywords": [
+            "classification",
+            "decision-tree",
+            "azure",
+            "scikit-learn",
+            "windows"
+        ],
+        "platform": [
+            "Microsoft Azure"
+        ],
+        "framework": [
+            "Scikit-learn",
+            "Numpy"
+        ],
+        "algorithm": "Decision-Tree-Classifier",
+        "license": "MIT",
+        "ml-model:type": "ml-model",
+        "ml-model:learning_approach": "supervised",
+        "ml-model:prediction_type": [
+            "classification"
+        ],
+        "ml-model:architecture": "decision-tree",
+        "ml-model:training-processor-type": "cpu",
+        "ml-model:training-os": "windows"
+    }
+}
