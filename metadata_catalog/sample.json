@@ -20,7 +20,7 @@
             "windows"
         ],
         "platform": [
-            "Microsoft Azure"
+            "Microsoft-Azure"
         ],
         "framework": [
             "Scikit-learn",
