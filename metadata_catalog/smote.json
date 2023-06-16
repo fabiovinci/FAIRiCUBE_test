@@ -22,58 +22,58 @@
         "license": "CC-BY-4.0",
         "processor-used": "cpu",
         "operating-system-used": "linux",
-        "use-constraints": "no Constraint of Use",
-        "links": [
-            {
-                "rel": "root",
-                "href": "./collection.json",
-                "type": "application/json",
-                "title": "Root Catalog"
-            },
-            {
-                "rel": "parent",
-                "href": "./collection.json",
-                "type": "application/json",
-                "title": "Root Catalog"
-            },
-            {
-                "rel": "collection",
-                "href": "./collection.json",
-                "type": "application/json"
-            },
-            {
-                "href": "https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html",
-                "rel": "about",
-                "type": "text/html",
-                "title": "Reference link"
-            },
-            {
-                "href": "https://github.com/cozzolinoac11/wildfire_prediction/blob/main/dataset_balancing.ipynb",
-                "rel": "about",
-                "type": "text/html",
-                "title": "Example"
-            }
-        ],
-        "assets": {
-            "input-data-used": {
-                "href": "https://public.epsilon-italia.it/FAIRiCUBE/wildfire-classification/data_numpy.zip",
-                "type": "application/json",
-                "title": "Input data used",
-                "description": "Numpy arrays with unbalanced classes (47.9% - 52.1%)",
-                "roles": [
-                    "data"
-                ]
-            },
-            "model-checkpoint": {
-                "href": "https://public.epsilon-italia.it/FAIRiCUBE/wildfire-classification/balanced_data_numpy.zip",
-                "type": "application/json",
-                "title": "Output data obtained",
-                "description": "Numpy arrays with balanced classes (50% - 50%)",
-                "biases-and-ethical-aspects": "Initial unbalanced dataset",
-                "roles": [
-                    "data"
-                ]
-            }
+        "use-constraints": "no Constraint of Use"
+    },
+    "links": [
+        {
+            "rel": "root",
+            "href": "./collection.json",
+            "type": "application/json",
+            "title": "Root Catalog"
+        },
+        {
+            "rel": "parent",
+            "href": "./collection.json",
+            "type": "application/json",
+            "title": "Root Catalog"
+        },
+        {
+            "rel": "collection",
+            "href": "./collection.json",
+            "type": "application/json"
+        },
+        {
+            "href": "https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html",
+            "rel": "about",
+            "type": "text/html",
+            "title": "Reference link"
+        },
+        {
+            "href": "https://github.com/cozzolinoac11/wildfire_prediction/blob/main/dataset_balancing.ipynb",
+            "rel": "about",
+            "type": "text/html",
+            "title": "Example"
+        }
+    ],
+    "assets": {
+        "input-data-used": {
+            "href": "https://public.epsilon-italia.it/FAIRiCUBE/wildfire-classification/data_numpy.zip",
+            "type": "application/json",
+            "title": "Input data used",
+            "description": "Numpy arrays with unbalanced classes (47.9% - 52.1%)",
+            "roles": [
+                "data"
+            ]
+        },
+        "model-checkpoint": {
+            "href": "https://public.epsilon-italia.it/FAIRiCUBE/wildfire-classification/balanced_data_numpy.zip",
+            "type": "application/json",
+            "title": "Output data obtained",
+            "description": "Numpy arrays with balanced classes (50% - 50%)",
+            "biases-and-ethical-aspects": "Initial unbalanced dataset",
+            "roles": [
+                "data"
+            ]
         }
     }
 }
