@@ -6,7 +6,7 @@
     ],
     "id": "stac-generation",
     "collection": "ml-models",
-    "geometry": "null",
+    "geometry": null,
     "properties": {
         "title": "STAC-generation",
         "description": "Issue per provare la generazione di file JSON - STAC",
