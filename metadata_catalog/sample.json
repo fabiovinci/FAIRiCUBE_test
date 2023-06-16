@@ -35,7 +35,8 @@
         ],
         "ml-model:architecture": "decision-tree",
         "ml-model:training-processor-type": "cpu",
-        "ml-model:training-os": "windows"
+        "ml-model:training-os": "windows",
+        "use-constraints": "no Constraint of Use"
     },
     "links": [
         {
@@ -59,13 +60,43 @@
             "href": "www.prova.com",
             "rel": "about",
             "type": "text/html",
-            "title": "Reference link-1"
+            "title": "Reference link"
         },
         {
             "href": "www.example.com",
             "rel": "about",
             "type": "text/html",
-            "title": "Example-1"
+            "title": "Example"
         }
-    ]
+    ],
+    "assets": {
+        "input-data-used-1": {
+            "href": "Link1",
+            "type": "application/json",
+            "title": "Input data used",
+            "description": "Characteristics of the Link-1",
+            "roles": [
+                "data"
+            ]
+        },
+        "input-data-used-2": {
+            "href": "Link2",
+            "type": "application/json",
+            "title": "Input data used",
+            "description": "Characteristics of the Link-2",
+            "roles": [
+                "data"
+            ]
+        },
+        "model-checkpoint": {
+            "href": "Link-1 to model 1",
+            "type": "application/octet-stream",
+            "title": "Model",
+            "description": "Characteristics of the model in the link1",
+            "performance": "97% accuracy",
+            "roles": [
+                "ml-model:checkpoint"
+            ]
+        }
+    }
 }
