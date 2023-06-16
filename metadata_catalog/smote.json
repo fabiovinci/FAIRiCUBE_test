@@ -65,7 +65,7 @@
                 "data"
             ]
         },
-        "model-checkpoint": {
+        "output-data-obtained": {
             "href": "https://public.epsilon-italia.it/FAIRiCUBE/wildfire-classification/balanced_data_numpy.zip",
             "type": "application/json",
             "title": "Output data obtained",
