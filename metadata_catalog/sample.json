@@ -19,9 +19,7 @@
             "scikit-learn",
             "windows"
         ],
-        "platform": [
-            "Microsoft-Azure"
-        ],
+        "platform": "Microsoft Azure",
         "framework": [
             "Scikit-learn",
             "Numpy"
@@ -30,9 +28,7 @@
         "license": "MIT",
         "ml-model:type": "ml-model",
         "ml-model:learning_approach": "supervised",
-        "ml-model:prediction_type": [
-            "classification"
-        ],
+        "ml-model:prediction_type": "classification",
         "ml-model:architecture": "decision-tree",
         "ml-model:training-processor-type": "cpu",
         "ml-model:training-os": "windows",
