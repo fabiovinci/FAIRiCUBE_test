@@ -70,8 +70,8 @@ body:
       label: Pubblication date 
       description: Date of publication - i.e., first sharing with the scientific community - of the resource.
     validations:
-      validationRule: "[A-Za-z]"
       required: true
+      validationRule: /[A-Za-z]/   <----- ✅ 🙏
   # objective
   - type: dropdown
     id: objective
