@@ -100,7 +100,7 @@ body:
     attributes:
       label: Platform
       description: Platform hosting the resource
-      multiple: true
+      multiple: false
       options:
         - EOX
         - Rasdaman
