@@ -71,7 +71,7 @@ body:
       description: Date of publication - i.e., first sharing with the scientific community - of the resource.
     validations:
       required: true
-      validationRule: /[A-Za-z]/   <----- ✅ 🙏
+      validationRule: '^\d*\.?\d+$'
   # objective
   - type: dropdown
     id: objective
